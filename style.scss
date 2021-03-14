@@ -1,0 +1,57 @@
+$lightgray:#babab1;
+$gray: #5c5d57;
+$white: #fff;
+
+// basic styles
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+// mixins
+@mixin line {
+    border: none;
+    background: $lightgray;
+    height: 2px;
+    width: 300px;
+    margin: 40px auto 0 auto;
+}
+
+@mixin flex($justify, $align, $direction) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+// header
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(./img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    text-align: center;
+    @include flex(center, center, column);
+    h3 {
+        color: $lightgray;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+    hr {
+        @include line;
+    }
+    h1 {
+        color: $white;
+        font-size: 8rem;
+        font-weight: 300;
+        letter-spacing:3px;
+    }
+}
