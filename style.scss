@@ -1,6 +1,7 @@
 $lightgray:#babab1;
 $gray: #5c5d57;
 $white: #fff;
+$transition: 0.4s ease;
 
 // basic styles
 
@@ -13,8 +14,13 @@ $white: #fff;
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
+    background: $lightgray;
 }
 
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
 // mixins
 @mixin line {
     border: none;
@@ -32,6 +38,18 @@ body {
     flex-direction: $direction;
 }
 
+@mixin btn {
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 2px solid $gray;
+    background: transparent;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+        background: $lightgray;
+    }
+}
 // header
 header {
     background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(./img/header.jpg);
@@ -54,4 +72,42 @@ header {
         font-weight: 300;
         letter-spacing:3px;
     }
+}
+
+// blog
+
+.blog {
+    .container {
+        @include flex (space-between, center, row);
+    article {
+        flex: 0 0 48%;
+        margin: 80px auto;
+        background: $white;
+        text-align: center;
+        img {
+            width: 100%;
+        }
+        h3 {
+            color: $lightgray;
+            font-weight: 300;
+            margin-top: 10px
+        }
+        hr {
+            @include line;
+            margin: 20px auto;
+            width: 150px;
+            height: 1px;
+        }
+        h2 {
+            font-weight: 300;
+        }
+        p {
+            color: $gray;
+            padding: 20px 10px;
+        }
+        button {
+            @include btn;
+        }
+        }
+    }     
 }

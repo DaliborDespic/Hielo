@@ -7,6 +7,12 @@
 body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
+  background: #babab1;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
 }
 
 header {
@@ -38,6 +44,57 @@ header h1 {
   font-size: 8rem;
   font-weight: 300;
   letter-spacing: 3px;
+}
+
+.blog .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.blog .container article {
+  flex: 0 0 48%;
+  margin: 80px auto;
+  background: #fff;
+  text-align: center;
+}
+.blog .container article img {
+  width: 100%;
+}
+.blog .container article h3 {
+  color: #babab1;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.blog .container article hr {
+  border: none;
+  background: #babab1;
+  height: 2px;
+  width: 300px;
+  margin: 40px auto 0 auto;
+  margin: 20px auto;
+  width: 150px;
+  height: 1px;
+}
+.blog .container article h2 {
+  font-weight: 300;
+}
+.blog .container article p {
+  color: #5c5d57;
+  padding: 20px 10px;
+}
+.blog .container article button {
+  text-transform: uppercase;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border: 2px solid #5c5d57;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.blog .container article button:hover {
+  background: #babab1;
 }
 
 /*# sourceMappingURL=style.css.map */
