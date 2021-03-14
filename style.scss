@@ -111,3 +111,57 @@ header {
         }
     }     
 }
+
+// about
+.about {
+    background-image: url(./img/header.jpg);
+    @include flex (center, center, column);
+    background-position: center;
+    background-size: cover;
+    height: 30vh;
+    text-align: center;
+    h3 {
+        color: $lightgray;
+        font-weight: 300;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+    hr {
+        @include line;
+    }
+    h2 {
+        color: $white;
+        font-size: 2rem;
+        font-weight: 300;
+        margin: 20px auto;
+    }
+}
+
+.gallery {
+    text-align: center;
+    margin: 40px 0;
+    h3 {
+        font-weight: 300;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+    h2 {
+        font-size: 2rem;
+        font-weight: 300;
+        margin: 20px auto;
+    }
+    div {
+        @include flex (space-between, center,row);
+        img {
+            width: 45%;
+            border: 10px solid $white;
+            margin-bottom: 20px;
+            transition: $transition;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+}

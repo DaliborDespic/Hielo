@@ -97,4 +97,68 @@ header h1 {
   background: #babab1;
 }
 
+.about {
+  background-image: url(./img/header.jpg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+  text-align: center;
+}
+.about h3 {
+  color: #babab1;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.about hr {
+  border: none;
+  background: #babab1;
+  height: 2px;
+  width: 300px;
+  margin: 40px auto 0 auto;
+}
+.about h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 20px auto;
+}
+
+.gallery {
+  text-align: center;
+  margin: 40px 0;
+}
+.gallery h3 {
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.gallery h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 20px auto;
+}
+.gallery div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.gallery div img {
+  width: 45%;
+  border: 10px solid #fff;
+  margin-bottom: 20px;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+.gallery div img:hover {
+  transform: scale(1.1);
+}
+
 /*# sourceMappingURL=style.css.map */
